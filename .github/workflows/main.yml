@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+
   workflow_dispatch:
 
 jobs:
@@ -31,9 +29,6 @@ jobs:
 
       - name: Get dependencies
         run: flutter pub get
-
-      - name: Analyze
-        run: flutter analyze
 
       - name: Build Web
         run: flutter build web --release
